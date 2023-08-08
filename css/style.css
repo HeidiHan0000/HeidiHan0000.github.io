@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&family=Inria+Serif&display=swap');
+
+
+
+:root{
+  --light-yellow:#FCF5C7;
+  --pink-orange:#FFC09F;
+  --pink-orange-bold:#FF691B;
+  --bright-green:#ADF7B6;
+  --light-blue:#C4E1F5;
+  --grey: #B1B1B1;
+  --sans-font:'Inria Sans', sans-serif;
+  --serif-font:'Inria Serif', serif;
+  /* then to use these, like 
+  font-family: var(--sans-font) */
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: var(--sans-font);
+  height: 100%;
+}
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 0.4s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* INTRO */
+.intro-container {
+  justify-content: center;
+  padding: 26vh 3rem !important;
+  height: 85vh;
+  background-color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.intro-text-container{
+  font-family: var(--serif-font);
+}
+
+u.intro-text{
+  text-decoration-color: var(--light-yellow);
+}
+
+h1.intro-text{
+  font-size: 2.2rem;
+}
+
+h5.intro-text{
+  font-size: 1rem;
+}
+
+.intro-image{
+  max-width: 50%;
+  height: auto;
+}
+
+.navbar{
+  background-color: #fff;
+  transition: 0.2s ease-in-out;
+  min-height: 12vh;
+  justify-content: center;
+}
+
+.nav-button{
+  color: var(--pink-orange);
+}
+
+.nav-color-change{
+  background-color: var(--light-yellow);
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-nav {
+  width: 110vh;
+  justify-content: space-around;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  flex-basis: auto;
+  justify-content: center;
+}
+
+.nav-link{
+  color: #FFC09F;
+  padding: 0rem 2rem;
+  font-family: var(--sans-font);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.nav-link-active{
+  color: var(--pink-orange-bold);
+}
+
+.contact-buttons-container{
+  color: var(--grey);
+  height: 4rem;
+}
+
+.contact-btn{
+  padding: 3rem 3rem 0rem 0rem;
+}
+
+/* PROJECTS */
+.section-container{
+  margin: 8rem 3rem;
+}
+
+.section-title{
+  text-align: center;
+  color: var(--pink-orange);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 6rem;
+}
+
+.project{
+  justify-content: center;
+  margin: 0rem 0rem 8rem;
+}
+
+.project-image{
+  width: 100%;
+  border-radius: 20px;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.project-name{
+  font-size: 1.4rem;
+  margin-top: 0.7rem;
+}
+
+.project-desc{
+  font-family: var(--serif-font);
+}
+
+/* for large screens */
+@media screen and (min-width: 768px) {
+  .intro-image{
+    width: 25%;
+  }
+  .section-container{
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-image{
+    float: right;
+    height: 13rem;
+    width: 20rem;
+    object-fit: cover;
+  }
+  .project:nth-child(odd){ 
+    flex-direction: row-reverse; 
+    text-align: right;
+  }
+  .project{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .project:nth-child(odd) > div:nth-child(1){ 
+    display: inline-flex;
+    justify-content: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .intro-container{
+    padding-left: 8vh;
+    padding-right: 8vh;
+  }
+  .section-container{
+    padding: 0rem 9rem;
+  }
+}
+
+ul{
+  padding: 0;
+  margin: 0.5rem 0rem;
+}
+
+.tools-used > li{
+  display: inline-block;
+  background-color: var(--bright-green);
+  border-radius: 20px;
+  padding: 0.3rem 0.6rem;
+  margin: 0 0.3rem;
+  font-size: 0.85rem;
+  color: #464646;
+}
+
+.timeline-line{
+  border-left: 3px solid;
+  color: var(--pink-orange);
+  position: absolute;
+  width: auto;
+  height: 15rem; /*figure this out - position: absolute but want to follow height of parent*/
+}
+
+/* EXPERIENCES*/
+.experience-date{
+  color: var(--grey);
+  margin-left: 1rem;
+}
+
+.experiences-column{
+  margin: 0rem 0rem 4rem 1rem;
+}
+
+.company-logo{
+  max-height: 2rem;
+  margin: 0.5rem 0;
+}
+
+.company-name{
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline-line{
+    border-left: none;
+    height: auto;
+    position: relative;
+    background-image: linear-gradient(var(--pink-orange), var(--pink-orange));
+    background-size: 3px 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .experience-date{
+    text-align: right;
+    margin: 3rem 0;
+  }
+  .experiences-column{
+    margin: 0;
+  }
+  .experience{
+    margin-bottom: 4rem !important;
+  }
+}
