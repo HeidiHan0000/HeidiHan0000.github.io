@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans&family=Inria+Serif&display=swap');
 
-
-
 :root{
   --light-yellow:#FCF5C7;
   --pink-orange:#FFC09F;
@@ -12,9 +10,8 @@
   --grey: #B1B1B1;
   --sans-font:'Inria Sans', sans-serif;
   --serif-font:'Inria Serif', serif;
-  /* then to use these, like 
-  font-family: var(--sans-font) */
 }
+
 *{
   box-sizing: border-box;
 }
@@ -114,6 +111,7 @@ h5.intro-text{
 /* PROJECTS */
 .section-container{
   margin: 8rem 3rem;
+  justify-content: center;
 }
 
 .section-title{
@@ -150,26 +148,32 @@ h5.intro-text{
   .intro-image{
     width: 25%;
   }
+
   .section-container{
-    max-width: 70%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
 
   .project-image{
     float: right;
-    height: 13rem;
-    width: 20rem;
+    width: 100%;
+    height: 100%;
+    max-width: 20rem;
+    max-height: 13rem;
     object-fit: cover;
   }
+
   .project:nth-child(odd){ 
     flex-direction: row-reverse; 
     text-align: right;
   }
+
   .project{
     margin-left: auto;
     margin-right: auto;
   }
+
   .project:nth-child(odd) > div:nth-child(1){ 
     display: inline-flex;
     justify-content: left;
@@ -181,8 +185,10 @@ h5.intro-text{
     padding-left: 8vh;
     padding-right: 8vh;
   }
+  
   .section-container{
     padding: 0rem 9rem;
+    max-width: 70%;
   }
 }
 
@@ -201,15 +207,22 @@ ul{
   color: #464646;
 }
 
+/* EXPERIENCES*/
 .timeline-line{
-  border-left: 3px solid;
-  color: var(--pink-orange);
+  background-image: linear-gradient(var(--pink-orange), var(--pink-orange));
+  background-size: 3px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
   position: absolute;
   width: auto;
-  height: 15rem; /*figure this out - position: absolute but want to follow height of parent*/
+  top: 0;
+  bottom: 0;
 }
 
-/* EXPERIENCES*/
+.experience-row{
+  position: relative;
+}
+
 .experience-date{
   color: var(--grey);
   margin-left: 1rem;
@@ -226,6 +239,18 @@ ul{
 
 .company-name{
   font-size: 1.4rem;
+}
+
+.circle{
+  background-color: var(--grey);
+  border: 4px white solid;
+  border-radius: 100%;
+  width: 21px;
+  height: 21px;
+  margin-top: 3rem;
+  position: absolute;
+  left: 2px;
+  z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
