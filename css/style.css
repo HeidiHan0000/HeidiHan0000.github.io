@@ -3,6 +3,7 @@
 
 :root{
   --light-yellow:#FCF5C7;
+  --dark-yellow:#ffe223;
   --pink-orange:#FFC09F;
   --pink-orange-bold:#FF691B;
   --bright-green:#ADF7B6;
@@ -44,8 +45,9 @@ body{
   font-family: var(--serif-font);
 }
 
-u.intro-text{
-  text-decoration-color: var(--light-yellow);
+u{
+  text-decoration-color: var(--dark-yellow);
+  text-decoration-thickness: 3px;
 }
 
 h1.intro-text{
@@ -61,6 +63,16 @@ h5.intro-text{
   height: auto;
 }
 
+.contact-buttons-container{
+  color: var(--grey);
+  height: 4rem;
+}
+
+.contact-btn{
+  padding: 3rem 3rem 0rem 0rem;
+}
+
+/*NAVBAR*/
 .navbar{
   background-color: #fff;
   transition: 0.2s ease-in-out;
@@ -77,14 +89,23 @@ h5.intro-text{
   transition: 0.3s ease-in-out;
 }
 
-.navbar-nav {
-  width: 110vh;
-  justify-content: space-around;
+.navbar-expand-lg .navbar-collapse {
+  justify-content: center;
 }
 
-.navbar-expand-lg .navbar-collapse {
-  flex-basis: auto;
+.collapsing{
   justify-content: center;
+  left: auto;
+  right: auto;
+  display: flex;
+}
+
+.show{
+  justify-content: center;
+  left: auto;
+  right: auto;
+  display: flex;
+  height: 100vh;
 }
 
 .nav-link{
@@ -97,16 +118,7 @@ h5.intro-text{
 
 .nav-link-active{
   color: var(--pink-orange-bold);
-}
-
-.contact-buttons-container{
-  color: var(--grey);
-  height: 4rem;
-}
-
-.contact-btn{
-  padding: 3rem 3rem 0rem 0rem;
-}
+} 
 
 /* PROJECTS */
 .section-container{
@@ -148,6 +160,11 @@ h5.intro-text{
   .intro-image{
     width: 25%;
   }
+  
+  .navbar-nav {
+    width: 70%;
+    justify-content: space-around;
+  }
 
   .section-container{
     max-width: 80%;
@@ -185,13 +202,21 @@ h5.intro-text{
     padding-left: 8vh;
     padding-right: 8vh;
   }
-  
+
+  .section-container{
+    padding: 0rem 5rem;
+    max-width: 80%;
+  }
+  .experiences-column{
+    padding-left: 2.5rem !important;
+  }
+}
+@media screen and (min-width: 1200px) {
   .section-container{
     padding: 0rem 9rem;
     max-width: 70%;
   }
 }
-
 ul{
   padding: 0;
   margin: 0.5rem 0rem;
@@ -271,6 +296,7 @@ ul{
     margin: 0;
   }
   .experience{
-    margin-bottom: 4rem !important;
+    margin-bottom: 6rem !important;
+    padding-left: 1.5rem;
   }
 }

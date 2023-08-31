@@ -2,7 +2,7 @@ const navbar = document.querySelector('.navbar');
 const introContainer = document.querySelector('.intro-container');
 var sections = document.querySelectorAll(".section-container");
 var links = document.querySelectorAll(".nav-link");
-
+const navBarCollapse = document.querySelector('.navbar-collapse');
 window.onscroll = () => {
   //change colour of nav bar when it sticks to the top
   if (window.scrollY > 700) {
@@ -42,3 +42,8 @@ window.onscroll = () => {
     }
   }
 };
+
+document.querySelectorAll('.nav-link').forEach((navLink) => {
+  navLink.addEventListener('click', ()=>{  
+    navBarCollapse.classList.remove('show');
+  })});
