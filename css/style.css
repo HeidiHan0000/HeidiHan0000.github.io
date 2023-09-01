@@ -7,6 +7,7 @@
   --pink-orange:#FFC09F;
   --pink-orange-bold:#FF691B;
   --bright-green:#ADF7B6;
+  --dark-green:#5ec66a;
   --light-blue:#C4E1F5;
   --grey: #B1B1B1;
   --sans-font:'Inria Sans', sans-serif;
@@ -16,6 +17,15 @@
 *{
   box-sizing: border-box;
 }
+
+a:hover{
+  color: black;
+}
+a{
+  text-decoration: none !important;
+  color: black;
+}
+
 body{
   font-family: var(--sans-font);
   height: 100%;
@@ -115,6 +125,9 @@ h5.intro-text{
   font-size: 1.1rem;
   font-weight: 600;
 }
+.nav-link:hover{
+  color: var(--pink-orange-bold);
+}
 
 .nav-link-active{
   color: var(--pink-orange-bold);
@@ -136,23 +149,34 @@ h5.intro-text{
 
 .project{
   justify-content: center;
-  margin: 0rem 0rem 8rem;
+  margin: 0rem 0rem 10rem;
 }
 
 .project-image{
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
   width: 100%;
+  height: auto;
+  transform: scale(1);
   border-radius: 20px;
-  height: 30vh;
-  object-fit: cover;
 }
 
+.project-link-button{
+  height: 1.1rem;
+  width: auto;
+  margin: 0 0.2rem 0.3rem;
+}
 .project-name{
-  font-size: 1.4rem;
-  margin-top: 0.7rem;
+  font-size: 1.3rem;
+  margin: 0.7rem 0;
 }
 
 .project-desc{
-  font-family: var(--serif-font);
+  font-size: 0.9rem;
+}
+.proj-desc-container{
+  margin-top: 1rem;
 }
 
 /* for large screens */
@@ -167,18 +191,33 @@ h5.intro-text{
   }
 
   .section-container{
-    max-width: 80%;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
   }
 
   .project-image{
     float: right;
-    width: 100%;
-    height: 100%;
+    transition: all 0.3s;
+    /* display: block; */
+    width: auto;
+    transform: scale(1);
+    height: 13rem;
+  }
+
+  .project-image:hover{
+    transform: scale(1.05);  
+  }
+
+  .project-image-container{
+    height: 13rem;
     max-width: 20rem;
-    max-height: 13rem;
+    overflow: hidden;
     object-fit: cover;
+    padding: 0;
+    position: relative;
+    margin: auto;
+    border-radius: 20px;
   }
 
   .project:nth-child(odd){ 
@@ -205,7 +244,7 @@ h5.intro-text{
 
   .section-container{
     padding: 0rem 5rem;
-    max-width: 80%;
+    max-width: 85%;
   }
   .experiences-column{
     padding-left: 2.5rem !important;
@@ -214,7 +253,7 @@ h5.intro-text{
 @media screen and (min-width: 1200px) {
   .section-container{
     padding: 0rem 9rem;
-    max-width: 70%;
+    max-width: 80%;
   }
 }
 ul{
@@ -223,13 +262,18 @@ ul{
 }
 
 .tools-used > li{
-  display: inline-block;
-  background-color: var(--bright-green);
-  border-radius: 20px;
-  padding: 0.3rem 0.6rem;
-  margin: 0 0.3rem;
-  font-size: 0.85rem;
   color: #464646;
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: var(--bright-green);
+  text-decoration-thickness: 3px;
+  font-weight: 700;
+  margin: 0.1rem;
+}
+
+.nonee{
+  text-decoration: none !important;
+  font-weight: 500 !important;
 }
 
 /* EXPERIENCES*/
