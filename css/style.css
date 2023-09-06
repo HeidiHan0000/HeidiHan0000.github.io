@@ -69,7 +69,7 @@ h5.intro-text{
 }
 
 .intro-image{
-  max-width: 50%;
+  max-width: 60%;
   height: auto;
 }
 
@@ -182,7 +182,7 @@ h5.intro-text{
 /* for large screens */
 @media screen and (min-width: 768px) {
   .intro-image{
-    width: 25%;
+    width: 35%;
   }
   
   .navbar-nav {
