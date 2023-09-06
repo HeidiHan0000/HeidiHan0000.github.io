@@ -160,6 +160,7 @@ h5.intro-text{
   height: auto;
   transform: scale(1);
   border-radius: 20px;
+  object-fit: cover;
 }
 
 .project-link-button{
@@ -198,6 +199,7 @@ h5.intro-text{
     width: 70%;
     justify-content: space-around;
   }
+
 
   .section-container{
     max-width: 85%;
@@ -253,7 +255,14 @@ h5.intro-text{
 
   .section-container{
     padding: 0rem 5rem;
-    max-width: 85%;
+    max-width: 85% !important;
+  }
+  h1.intro-text{
+    font-size: 2.2rem !important;
+  }
+  
+  h5.intro-text{
+    font-size: 1rem !important;
   }
   .experiences-column{
     padding-left: 2.5rem !important;
@@ -262,7 +271,21 @@ h5.intro-text{
 @media screen and (min-width: 1200px) {
   .section-container{
     padding: 0rem 9rem;
-    max-width: 80%;
+    max-width: 60%;
+  }
+  .intro-image{
+    width: 50% !important;
+  }
+  .intro-image-background{
+    width: 80%;
+    object-fit: cover
+  }
+  h1.intro-text{
+    font-size: 2.4rem;
+  }
+  
+  h5.intro-text{
+    font-size: 1.3rem;
   }
 }
 ul{
