@@ -52,7 +52,7 @@ body{
 }
 
 .intro-text-container{
-  font-family: var(--serif-font);
+  /* font-family: var(--serif-font); */
 }
 
 u{
@@ -178,13 +178,22 @@ h5.intro-text{
 .proj-desc-container{
   margin-top: 1rem;
 }
+.intro-image-background{
+  width: 100%;
+  object-fit: cover
+}
 
+.intro-image-container{
+  position: relative;
+}
+
+.intro-image{
+  position: absolute;
+  width: 90%;
+  top: 30%;
+}
 /* for large screens */
 @media screen and (min-width: 768px) {
-  .intro-image{
-    width: 35%;
-  }
-  
   .navbar-nav {
     width: 70%;
     justify-content: space-around;
