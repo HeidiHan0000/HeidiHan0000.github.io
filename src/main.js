@@ -3,15 +3,26 @@ const introContainer = document.querySelector('.intro-container');
 var sections = document.querySelectorAll(".section-container");
 var links = document.querySelectorAll(".nav-link");
 const navBarCollapse = document.querySelector('.navbar-collapse');
+
 window.onscroll = () => {
   //change colour of nav bar when it sticks to the top
   if (window.scrollY > 700) {
       navbar.classList.add('nav-color-change');
       introContainer.classList.add('nav-color-change');
-  } else {
+      // document.documentElement.scrollTop = 1000;
+      // document.getElementById("experiences").scrollIntoView({behavior:'instant'})
+
+      } else {
       navbar.classList.remove('nav-color-change');
       introContainer.classList.remove('nav-color-change');
+
+      // window.scrollTo({top:0,behavior:'instant'});
   }
+  // if (window.scrollY ) {
+  //   // location.href = "#";
+  //   // location.href = "#experiences"
+  //   // window.scrollTo({ top: scrollDiv-70, behavior: 'smooth'});
+  // }
 
   //fade in up effect
   var reveals = document.querySelectorAll(".reveal");
@@ -47,3 +58,17 @@ document.querySelectorAll('.nav-link').forEach((navLink) => {
   navLink.addEventListener('click', ()=>{  
     navBarCollapse.classList.remove('show');
   })});
+
+  // window.addEventListener("scroll", ()=> {
+  //   if (window.scrollY > 700) {
+
+  //     // document.documentElement.scrollTop = 1000;
+  //     window.scrollTo({top: 1000, behavior: 'instant'});
+    
+  //     } else {
+
+  //     window.scrollTo({top:0, behavior: 'instant'});
+    
+  //     // window.scrollTo({top:0,behavior:'smooth'});
+  //   }
+  // })

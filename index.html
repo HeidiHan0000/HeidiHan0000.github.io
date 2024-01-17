@@ -10,42 +10,128 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9f46fb87f9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
-    <div class="intro-containerr overflow-hidden">
-      <div class="intro-container row p-5 center-block overflow-hidden">
-        <div class="intro-text-container col-md-4">
-          <h1 class="intro-text">Nice to meet you! <br> I'm <u> Heidi Han</u> </h2>
-          <h5 class="intro-text">a new grad with a BAS in Mechatronics Engineering from the University of Waterloo.</h5>
-          <!-- <div class="contact-buttons-container">
-            <i class="fa-regular fa-envelope fa-xl contact-btn"></i>
-            <i class="fa-brands fa-linkedin fa-xl contact-btn"></i>
-            <i class="fa-brands fa-github fa-xl contact-btn"></i>
-          </div> -->
-        </div>
-        <div class="col-md-4 pl-3 pt-3 intro-image-container">
-          <lottie-player class="intro-image-background "  src="https://lottie.host/46e49523-ce54-47dd-9b97-4f3f416b14e6/MuBTSBzpdl.json" background="transparent"  speed="1"   loop  autoplay></lottie-player>
-          <img class="intro-image col-md-4 pl-3 pt-3" src="./assets/me_no_background.svg" alt="">
+    <div class="intro-containerr ">
+      <div class="overflow-hidden scroll-area">
+        <div class="intro-container row p-5 center-block overflow-hidden">
+          <div class="intro-text-container col-md-4">
+            <h1 class="intro-text">Nice to meet you! <br> I'm <u> Heidi Han</u>, </h2>
+            <h5 class="intro-text">a new grad with a BAS in Mechatronics Engineering from the University of Waterloo.</h5>
+            <!-- <div class="contact-buttons-container">
+              <i class="fa-regular fa-envelope fa-xl contact-btn"></i>
+              <i class="fa-brands fa-linkedin fa-xl contact-btn"></i>
+              <i class="fa-brands fa-github fa-xl contact-btn"></i>
+            </div> -->
+          </div>
+          <div class="col-md-4 pl-3 pt-3 intro-image-container">
+            <lottie-player class="intro-image-background "  src="https://lottie.host/46e49523-ce54-47dd-9b97-4f3f416b14e6/MuBTSBzpdl.json" background="transparent"  speed="1"   loop  autoplay></lottie-player>
+            <img class="intro-image col-md-4 pl-3 pt-3" src="./assets/me_no_background.svg" alt="">
+          </div>
         </div>
       </div>
+      <nav class="navbar navbar-expand-lg sticky-top fixed-bottom ">
+        <div class="navbar-toggler nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          More about me!
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#">About Me  <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link experiences" href="#experiences">Experiences</a>
+            <a class="nav-item nav-link projects" href="#projects">Projects</a>
+          </div>
+        </div>
+      </nav>
+    
+    
+
+
+    <div class="section-container scroll-area" id="experiences">
+      <div class="section-title">Experiences</div>
+      <div class="reveal">
+        <div class="row experience-row">
+          <div class="col-md-3 experience-date experience">May-Aug 2022</div>
+          <div class="col-md-1 timeline-line">
+            <div class="circle"></div>
+          </div>
+          <div class="col-md-7 experiences-column experience">
+            <img class="company-logo" src="./assets/avast.png"></img>
+            <h3 class="company-name">Avast Software</h3>
+            <div class="experience-desc">
+              Applied Decentralized Identity Foundation (DIF) standards to TrustBloc Wallet, a web implementation of a verifiable credential holder, to increase interoperability and allow dynamic credential displays using <u>Go</u>
+              <br><br>
+              Architected and implemented changes to Hyperledger Aries regarding credential metadata using <u>Go</u> and integrated changes to Wallet frontend, as well as other UI features, refactoring, and bug fixes using <u>Vue.js</u>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 experience-date experience">Jan-Apr 2022</div>
+          <div class="col-md-1 timeline-line">
+            <div class="circle"></div>
+          </div>
+          <div class="col-md-7 experiences-column experience">
+            <img class="company-logo" src="./assets/textnow.jpg"></img>
+            <h3 class="company-name">TextNow</h3>
+            <div class="experience-desc">
+              Developed calling API used in TextNow mobile applications using <u>C++</u>
+              <br><br>
+              Conducted internal dogfooding and A/B testing to analyze and optimize WebRTC and VoIP call flows using <u>SIP3</u>, <u>Embrace</u>, <u>Kibana</u>, and <u>Leanplum</u>
+              <br><br>
+              Collaborated with both iOS and Android teams for call-related features using <u>Swift/Objective-C</u> and <u>Java/Kotlin</u>
+            </div>
+          </div>
+        </div>
+        <div class="row experience-row">
+          <div class="col-md-3 experience-date experience">May-Aug 2021</div>
+          <div class="col-md-1 timeline-line">
+            <div class="circle"></div>
+          </div>
+          <div class="col-md-7 experiences-column experience">
+            <img class="company-logo" src="./assets/arup.jpg"></img>
+            <h3 class="company-name">Arup</h3>
+            <div class="experience-desc">
+              Improved user experience with MassMotion, a 3D crowd simulation software by adding features and bug fixes to components including UI, SDK, and database using <u>C++</u>, <u>Qt</u>, and <u>SQLite3</u> and tested using <u>Catch2</u>            
+            </div>
+          </div>
+        </div>
+        <div class="row experience-row">
+          <div class="col-md-3 experience-date experience">Sept-Dec 2020</div>
+          <div class="col-md-1 timeline-line">
+            <div class="circle"></div>
+          </div>
+          <div class="col-md-7 experiences-column experience">
+            <img class="company-logo" src="./assets/ford.png"></img>
+            <h3 class="company-name">Ford Motor Company</h3>
+            <div class="experience-desc">
+              Optimized app startup processes using <u>C++</u> and <u>SQLite3</u> as part of the Application Lifecycle Manager team
+              Performed testing and code maintenance <u></u>using Google Test and Mock test framework and <u></u>static code analysis
+            </div>
+          </div>
+        </div>
+        <div class="row experience-row">
+          <div class="col-md-3 experience-date experience">Jan-Apr 2022</div>
+          <div class="col-md-1 timeline-line">
+            <div class="circle"></div>
+          </div>
+          <div class="col-md-7 experiences-column experience">
+            <img class="company-logo" src="./assets/veeva.jpg"></img>
+            <h3 class="company-name">Veeva Systems</h3>
+            <div class="experience-desc">
+              Ensured the quality of Network-Integration products through methods such as integration testing, E2E testing, API testing, functional and non-functional testing            
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="view-more-button" href="./assets/HeidiHan2024.pdf">
+        View full resume
+      </a>
+      
     </div>
-    <nav class="navbar navbar-expand-lg sticky-top fixed-bottom">
-      <div class="navbar-toggler nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        More about me!
-      </div>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#">About Me  <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link projects" href="#projects">Projects</a>
-          <a class="nav-item nav-link experiences" href="#experiences">Experiences</a>
-          <a class="nav-item nav-link" href="./assets/sept2023Resume.pdf">Resume</a>
-          <a class="nav-item nav-link" href = "mailto: heidihan0000@gmail.com">Contact</a>
-        </div>
-      </div>
-    </nav>
-    <div class="section-container" id="projects">
-      <h2 class="section-title" >Projects</h2>
+ 
+    <div class="section-container scroll-area" id="projects">
+      <h2 class="section-title">Projects</h2>
       <div class="reveal">
         <div class="project row gx-5">
           <a class="col-md-6 project-image-container"
@@ -135,87 +221,28 @@
           </div>
         </div>
       </div>
-      
+      <a class="view-more-button" href="https://github.com/HeidiHan0000">
+        View Github
+      </a>
     </div>
 
-    <div class="section-container" id="experiences">
-      <div class="section-title">Experiences</div>
-      <div class="reveal">
-        <div class="row experience-row">
-          <div class="col-md-3 experience-date experience">May-Aug 2022</div>
-          <div class="col-md-1 timeline-line">
-            <div class="circle"></div>
-          </div>
-          <div class="col-md-7 experiences-column experience">
-            <img class="company-logo" src="./assets/avast.png"></img>
-            <h3 class="company-name">Avast Software</h3>
-            <div class="experience-desc">
-              Applied Decentralized Identity Foundation (DIF) standards to TrustBloc Wallet, a web implementation of a verifiable credential holder, to increase interoperability and allow dynamic credential displays using <u>Go</u>
-              <br><br>
-              Architected and implemented changes to Hyperledger Aries regarding credential metadata using <u>Go</u> and integrated changes to Wallet frontend, as well as other UI features, refactoring, and bug fixes using <u>Vue.js</u>
-            </div>
-          </div>
+    <div data-aos="fade-zoom-in"
+    data-aos-easing="ease-in-back"
+    data-aos-delay="300"
+    data-aos-offset="0" class="container bottom-footer justify-content-center">
+      <div class="row justify-content-center top-icon-links">
+        <div class="col-sm footer-icon">
+          <a href="mailto:heidihan0000@gmail.com" class="contact-icons"><i class="far fa-envelope"></i></a>
         </div>
-        <div class="row">
-          <div class="col-md-3 experience-date experience">Jan-Apr 2022</div>
-          <div class="col-md-1 timeline-line">
-            <div class="circle"></div>
-          </div>
-          <div class="col-md-7 experiences-column experience">
-            <img class="company-logo" src="./assets/textnow.jpg"></img>
-            <h3 class="company-name">TextNow</h3>
-            <div class="experience-desc">
-              Developed calling API used in TextNow mobile applications using <u>C++</u>
-              <br><br>
-              Conducted internal dogfooding and A/B testing to analyze and optimize WebRTC and VoIP call flows using <u>SIP3</u>, <u>Embrace</u>, <u>Kibana</u>, and <u>Leanplum</u>
-              <br><br>
-              Collaborated with both iOS and Android teams for call-related features using <u>Swift/Objective-C</u> and <u>Java/Kotlin</u>
-            </div>
-          </div>
+        <div class="col-sm footer-icon">
+          <a href="https://www.linkedin.com/in/heidi0000" class="contact-icons"><i class="fab fa-linkedin"></i></a>
         </div>
-        <div class="row experience-row">
-          <div class="col-md-3 experience-date experience">May-Aug 2021</div>
-          <div class="col-md-1 timeline-line">
-            <div class="circle"></div>
-          </div>
-          <div class="col-md-7 experiences-column experience">
-            <img class="company-logo" src="./assets/arup.jpg"></img>
-            <h3 class="company-name">Arup</h3>
-            <div class="experience-desc">
-              Improved user experience with MassMotion, a 3D crowd simulation software by adding features and bug fixes to components including UI, SDK, and database using <u>C++</u>, <u>Qt</u>, and <u>SQLite3</u> and tested using <u>Catch2</u>            
-            </div>
-          </div>
-        </div>
-        <div class="row experience-row">
-          <div class="col-md-3 experience-date experience">Sept-Dec 2020</div>
-          <div class="col-md-1 timeline-line">
-            <div class="circle"></div>
-          </div>
-          <div class="col-md-7 experiences-column experience">
-            <img class="company-logo" src="./assets/ford.png"></img>
-            <h3 class="company-name">Ford Motor Company</h3>
-            <div class="experience-desc">
-              Optimized app startup processes using <u>C++</u> and <u>SQLite3</u> as part of the Application Lifecycle Manager team
-              Performed testing and code maintenance <u></u>using Google Test and Mock test framework and <u></u>static code analysis
-            </div>
-          </div>
-        </div>
-        <div class="row experience-row">
-          <div class="col-md-3 experience-date experience">Jan-Apr 2022</div>
-          <div class="col-md-1 timeline-line">
-            <div class="circle"></div>
-          </div>
-          <div class="col-md-7 experiences-column experience">
-            <img class="company-logo" src="./assets/veeva.jpg"></img>
-            <h3 class="company-name">Veeva Systems</h3>
-            <div class="experience-desc">
-              Ensured the quality of Network-Integration products through methods such as integration testing, E2E testing, API testing, functional and non-functional testing            
-            </div>
-          </div>
+        <div class="col-sm footer-icon">
+          <a href="https://www.github.com/Heidi0000" class="contact-icons"><i class="fab fa-github"></i></a>
         </div>
       </div>
-      
     </div>
+  </div>
     <script src="" async defer></script>
     <script src="./src/main.js"></script>
 
