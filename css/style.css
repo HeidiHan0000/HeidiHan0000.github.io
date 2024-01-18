@@ -47,8 +47,8 @@ body{
 /* INTRO */
 .intro-container {
   justify-content: center;
-  padding: 26vh 3rem !important;
-  height: 85vh;
+  padding: 23vh 3rem !important;
+  height: 89vh;
   background-color: white;
   transition: background-color 0.2s ease-in-out;
 }
@@ -86,20 +86,14 @@ h5.intro-text{
 
 /*NAVBAR*/
 .navbar{
-  background-color: #fff;
-  transition: 0.2s ease-in-out;
-  min-height: 12vh;
-  justify-content: center;
+  display: none;
 }
 
 .nav-button{
   color: var(--pink-orange);
 }
 
-.nav-color-change{
-  background-color: var(--light-yellow);
-  transition:  background-color .2s ease;
-}
+
 
 .navbar-expand-lg .navbar-collapse {
   justify-content: center;
@@ -197,6 +191,19 @@ h5.intro-text{
 }
 /* for large screens */
 @media screen and (min-width: 768px) {
+  .navbar{
+    display: flex;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+    min-height: 12vh;
+    justify-content: center;
+  }
+
+  .nav-color-change{
+    background-color: var(--light-yellow);
+    transition:  background-color .2s ease;
+  }
+
   .navbar-nav {
     width: 70%;
     justify-content: space-around;
@@ -277,6 +284,8 @@ h5.intro-text{
   .intro-container{
     padding-left: 8vh;
     padding-right: 8vh;
+    padding-top: 26vh;
+    height: 85vh;
   }
 
   .section-container{
@@ -406,11 +415,15 @@ ul{
 
 .bottom-footer{
   justify-content: center;
-  width: 20%;
+  width: 50%;
   padding: 2rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .footer-icon{
   display: flex;
   justify-content: center;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
