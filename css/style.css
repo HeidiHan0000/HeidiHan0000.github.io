@@ -145,7 +145,7 @@ h5.intro-text{
 
 .project{
   justify-content: center;
-  margin: 0rem 0rem 2rem;
+  margin: 0rem 0rem 4rem;
 }
 
 .project-image{
@@ -321,6 +321,26 @@ h5.intro-text{
   
   h5.intro-text{
     font-size: 1.3rem;
+  }
+  
+  .project:nth-child(odd) > .project-image-container {
+    margin-left: 1.2rem;
+  }
+  .project:nth-child(even) > .project-image-container {
+    margin-right: 1.2rem;
+  }
+  .project:nth-child(odd) > .proj-desc-container {
+    margin-right: 1.2rem;
+  }
+  .project:nth-child(even) > .proj-desc-container {
+    margin-left: 1.2rem;
+  }
+  
+}
+
+@media screen and (min-width: 1500px) {
+  .project{
+    max-width: 75%;
   }
 }
 ul{
